@@ -1,0 +1,132 @@
+.user_details{
+    background-color: #f3f3f9;
+    
+}
+h2{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    color: #495057;
+}
+.card_body{
+    margin: 1.25rem;
+    padding: 10px;
+    flex: 1 1 auto;
+    background-color: white;
+
+}
+.search_bar{
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: 0.3px solid lightgray;
+    height:  16px;
+    color: #555b6d;
+    background-color: #f3f3f9;
+    max-width: 20%;
+}
+.search_bar > input{
+    outline: none;
+    border: none;
+    background: none;
+    color: #555b6d;
+  
+}
+.avatar{
+    height: 25px;
+    width: 25px;
+    border-radius: 50% !important;
+    object-fit: contain;
+
+}
+thead{
+    width: 100%;
+    border-bottom: 2px solid rgba(211, 211, 211, 0.500);
+
+}
+
+.list_body_row:hover{
+    background-color: #b7d4eb33;
+    cursor: pointer;
+}
+tr{
+    
+
+    display: table-row;
+    vertical-align: center;
+    border-bottom: 0.3px solid rgba(211, 211, 211, 0.500
+    );
+
+}
+// tr:hover{
+//     background-color: #bfc1cc5e;
+// }
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    text-align: left;
+    color:  #495057;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+table>:not(caption)>*>*{
+    padding: 0.75rem;
+    border-bottom-width: 1px;
+   
+}
+a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #343A40;
+    text-decoration: none;
+}
+
+p{
+    font-size: 13px;
+    font-weight: 400;
+    color: #74788D;
+}
+td{
+    font-size: 13px;
+    color: #495057;
+    padding: 12px;
+}
+.dropup path{
+color: grey;
+}
+.order{
+    padding-top: 10px;
+    margin-top: 10px;
+}
+.dropup svg{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+
+
+}
+.dropdown svg{
+    height: 20px;
+    width: 20px;
+cursor: pointer;
+}
+.order{
+    margin: 0;
+}
+.modified path{
+    color: rgba(57, 57, 235, 0.664);
+}
+.delete path {
+    color: rgba(255, 0, 0, 0.671);
+}
+.sortable{
+    position: relative;
+    
+}
