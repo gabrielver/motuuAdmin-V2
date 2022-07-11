@@ -13,17 +13,17 @@ function Login() {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((userAuth) => {
-        userAuth.user
+        userAuth.user!
           .updateProfile({
-            displayName: name,
+            displayName: name!,
           })
           .then(() => {
             dispatch(
               login({
-                email: userAuth.user.email,
-                uid: userAuth.user.uid,
+                email: userAuth.user!.email,
+                uid: userAuth.user!.uid,
                 displayName: name,
-                photoUrl: profilePic,
+                // photoUrl: profilePic,
               })
             );
           });
@@ -38,10 +38,10 @@ function Login() {
       .then((userAuth) => {
         dispatch(
           login({
-            email: userAuth.user.email,
-            uid: userAuth.user.uid,
-            displayName: userAuth.user.displayName,
-            profileUrl: userAuth.user.photoURL,
+            email: userAuth.user!.email,
+            uid: userAuth.user!.uid,
+            displayName: userAuth.user!.displayName,
+            profileUrl: userAuth.user!.photoURL,
           })
         );
       })

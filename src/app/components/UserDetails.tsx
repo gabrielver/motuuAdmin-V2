@@ -6,6 +6,8 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import "./component_styles/UserDetails.scss";
 import SearchIcon from "@mui/icons-material/Search";
 function UserDetails() {
+
+  const index = 0
   return (
     <div className="user_details">
       <h2>Users List</h2>
@@ -21,9 +23,9 @@ function UserDetails() {
                 <th className="selection" data-row-selection="true">
                   <input type="checkbox" name="" id="" />
                 </th>
-                <th tabIndex="0">#</th>
+                <th tabIndex= {index} >#</th>
                 <th
-                  tabIndex="0"
+                  tabIndex={index}
                   aria-label="name sortable"
                   className="sortable"
                 >
@@ -38,7 +40,7 @@ function UserDetails() {
                   </span>
                 </th>
                 <th
-                  tabIndex="0"
+                  tabIndex={index}
                   aria-label="Email sortable"
                   className="sortable"
                 >
@@ -53,7 +55,7 @@ function UserDetails() {
                   </span>
                 </th>
                 <th
-                  tabIndex="0"
+                  tabIndex={index}
                   aria-label="Travels sortable"
                   className="sortable"
                 >
@@ -68,7 +70,7 @@ function UserDetails() {
                   </span>
                 </th>
                 <th
-                  tabIndex="0"
+                  tabIndex={index}
                   aria-label="Followers sortable"
                   className="sortable"
                 >
@@ -82,7 +84,7 @@ function UserDetails() {
                     </span>
                   </span>
                 </th>
-                <th tabIndex="0">Action</th>
+                <th tabIndex={index}>Action</th>
               </tr>
             </thead>
             <tbody className="list_body_row">

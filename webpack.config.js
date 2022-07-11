@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    bundle: path.resolve(__dirname, "src/index.js"),
+    bundle: path.resolve(__dirname, "src/index.tsx"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -21,6 +21,9 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"],
   },
   module: {
     rules: [
@@ -42,6 +45,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
+      { test: /\.tsx?$/, loader: "ts-loader" },
     ],
   },
   plugins: [

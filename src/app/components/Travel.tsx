@@ -1,8 +1,10 @@
 import React from "react";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import { useNavigate } from "react-router-dom";
 
 function Travel() {
+  let navigate = useNavigate();
   return (
     <div className="report">
       <div className="report_top">
@@ -21,7 +23,9 @@ function Travel() {
         <div className="report_left">
           <p>nbr of report this months ...</p>
           <p>report to take care of ...</p>
-          <button>See all Travels</button>
+          <button onClick={() => {
+              navigate("./Travel");
+            }}>See all Travels</button>
         </div>
         {/* <div className="report_right">
           <div className="report_chart">
