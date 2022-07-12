@@ -1,23 +1,31 @@
-.user_details{
-    background-color: #f3f3f9;
-    
-}
-h2{
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    padding-top: 1.25rem;
-    padding-left: 1.25rem;
-    color: #495057;
-}
-.card_body{
-    margin: 1.25rem;
-    padding: 10px;
-    flex: 1 1 auto;
-    background-color: white;
+@import "src/styles/utilities/variable";
 
-}
-.search_bar{
+// $backgroundBase: #f3f3f9;
+
+// $IndexlistSize: 14px;
+// $Indexlistcolor: #495057;
+// $Indexlistweight:  600;
+
+// $IndexResultSize: 13px;
+
+.user_details{
+    background-color: $backgroundBase;
+ 
+    h2{
+        font-size: 16px;
+        font-weight: $Indexlistweight;
+        text-transform: uppercase;
+        padding-top: 1.25rem;
+        padding-left: 1.25rem;
+        color: $Indexlistcolor;
+    }
+    .card_body{
+        margin: 1.25rem;
+        padding: 10px;
+        flex: 1 1 auto;
+        background-color: white;
+
+        .search_bar{
     margin: 15px;
     padding: 10px;
     display: flex;
@@ -26,16 +34,24 @@ h2{
     border: 0.3px solid lightgray;
     height:  16px;
     color: #555b6d;
-    background-color: #f3f3f9;
+    background-color: $backgroundBase;
     max-width: 20%;
+
+    input{
+        outline: none;
+        border: none;
+        background: none;
+        color: #555b6d;
+      
+    }
 }
-.search_bar > input{
-    outline: none;
-    border: none;
-    background: none;
-    color: #555b6d;
-  
+    
+    }
 }
+
+
+
+
 .avatar{
     height: 25px;
     width: 25px;
@@ -50,7 +66,7 @@ thead{
 }
 
 .list_body_row:hover{
-    background-color: #b7d4eb33;
+    background-color: $backgroundBase;
     cursor: pointer;
 }
 tr{
@@ -62,19 +78,26 @@ tr{
     );
 
 }
-// tr:hover{
-//     background-color: #bfc1cc5e;
-// }
+
 table{
     width: 100%;
     border-collapse: collapse;
 }
 th{
+   
     text-align: left;
-    color:  #495057;
+    color:  $Indexlistcolor;
     font-size: 13px;
+    width: fit-content;
     font-weight: 600;
+    
+    .sortable{
+   
+        vertical-align: center;
+    }
 }
+
+
 
 table>:not(caption)>*>*{
     padding: 0.75rem;
@@ -89,13 +112,13 @@ a{
 }
 
 p{
-    font-size: 13px;
+    font-size: $IndexResultSize;
     font-weight: 400;
     color: #74788D;
 }
 td{
-    font-size: 13px;
-    color: #495057;
+    font-size: $IndexResultSize;
+    color: $Indexlistcolor;
     padding: 12px;
 }
 .dropup path{
@@ -120,13 +143,4 @@ cursor: pointer;
 .order{
     margin: 0;
 }
-.modified path{
-    color: rgba(57, 57, 235, 0.664);
-}
-.delete path {
-    color: rgba(255, 0, 0, 0.671);
-}
-.sortable{
-    position: relative;
-    
-}
+

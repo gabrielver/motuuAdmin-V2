@@ -1,13 +1,14 @@
 import React from "react";
 import Body from "./Body";
 import Header from "./Header";
-import "./styles/Main.scss";
+import "/src/styles/layout/Main.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LocationDetails from "./components/LocationDetails";
-import ReportDetail from "./components/ReportDetails";
+
 import UserDetails from "./components/UserDetails";
 import TravelDetails from "./components/TravelDetails";
 import ErrorPage from "./components/ErrorPage";
+import PlaceDetails from "./components/PlaceDetails";
 
 function Main() {
   return (
@@ -16,7 +17,7 @@ function Main() {
         <Header />
         <Routes>
           <Route path="/" element={<Body />} />
-          <Route path="/Report" element={<ReportDetail />} />
+          <Route path="/Place" element={<PlaceDetails />} />
           <Route path="/User" element={<UserDetails />} />
           <Route path="/Travel" element={<TravelDetails />} />
           <Route path="/Location" element={<LocationDetails />} />

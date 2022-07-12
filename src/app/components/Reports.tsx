@@ -1,5 +1,5 @@
 import React from "react";
-import "./component_styles/Reports.scss";
+import "/src/styles/modules/Reports.scss";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import { Link } from "react-router-dom";

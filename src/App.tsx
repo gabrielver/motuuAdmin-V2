@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Sidebar from "./app/Sidebar";
 import Main from "./app/Main";
-import { login, logout, selectUser } from "./features/userSlice";
+import { login, logout, selectUser } from "./store/userSlice";
 import Login from "./Login";
 import { auth } from "./firebase";
 

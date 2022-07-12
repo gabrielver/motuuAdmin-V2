@@ -4,7 +4,7 @@ import Recap from "./components/Recap";
 import Reports from "./components/Reports";
 import Travel from "./components/Travel";
 import User from "./components/User";
-import "./styles/Body.scss";
+import "/src/styles/layout/Body.scss";
 
 function Body() {
   return (

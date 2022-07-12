@@ -1,7 +1,7 @@
 import React from "react";
-import "./styles/Header.scss";
+import "/src/styles/layout/Header.scss";
 import SearchIcon from "@mui/icons-material/Search";
-import Header_option from "./Header_option";
+import HeaderOption from "./HeaderOption";
 // import HomeIcon from "@mui/icons-material/Home";
 // import FlagIcon from "@mui/icons-material/Flag";
 // import PersonIcon from "@mui/icons-material/Person";
@@ -9,7 +9,7 @@ import LocalAirportIcon from "@mui/icons-material/LocalAirport";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useDispatch } from "react-redux";
 import { auth } from "../firebase";
-import { logout } from "../features/userSlice";
+import { logout } from "../store/userSlice";
 import { Link } from "react-router-dom";
 
 import { HomeIcon } from '@heroicons/react/solid'
@@ -48,27 +48,27 @@ function Header() {
       </div>
       <div className="header_right">
         <Link to="/">
-          <Header_option Icon={HomeIcon} title="Home" avatar={undefined}
+          <HeaderOption Icon={HomeIcon} title="Home" avatar={undefined}
   />
         </Link>
-        <Link to="/Report">
+        <Link to="/Place">
           {" "}
-          <Header_option Icon={FlagIcon} title="Reports" avatar={undefined} />
+          <HeaderOption Icon={FlagIcon} title="Place" avatar={undefined} />
         </Link>
 
         <Link to="/User">
-          <Header_option Icon={UserIcon} title="User" avatar={undefined}  />
+          <HeaderOption Icon={UserIcon} title="User" avatar={undefined}  />
         </Link>
         <Link to="/Travel">
           {" "}
-          <Header_option Icon={GlobeIcon} title="Travels" avatar={undefined} 
+          <HeaderOption Icon={GlobeIcon} title="Travels" avatar={undefined} 
         />
         </Link>
         <Link to="/Location">
-          <Header_option Icon={LocationMarkerIcon} title="Location" avatar={undefined} 
+          <HeaderOption Icon={LocationMarkerIcon} title="Location" avatar={undefined} 
          />
         </Link>
-        <Header_option
+        <HeaderOption
           avatar="https://dw-wp-production.imgix.net/2021/02/Musk.jpg?w=1200&h=800&ixlib=react-9.0.3"
           title="Admin"
 
