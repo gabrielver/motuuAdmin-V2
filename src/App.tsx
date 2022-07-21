@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Sidebar from "./components/layout/navigation/Sidebar";
+import LeftMenu from "./components/layout/navigation/LeftMenu";
 import Main from "./components/layout/Main";
 import { login, logout, selectUser } from "./store/authentification/userSlice";
 import Login from "./store/authentification/Login";
@@ -34,7 +34,7 @@ export function App() {
         <Login />
       ) : (
         <div className="app">
-          <Sidebar />
+          <LeftMenu />
           <Main />
         </div>
       )}

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sidebar.scss";
+import "./LeftMenu.scss";
 
 function Sidebar() {
   return (

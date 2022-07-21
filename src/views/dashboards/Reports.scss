@@ -3,84 +3,106 @@
     background-color: white;
     padding: 10px;
     border-radius: 5px;
+
+    .report_top{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+
+        h2{
+            font-size: 18px;
+            font-weight: 800;
+            color: #495057;
+        }
+
+        .report_dropdown{
+            display: flex;
+            height: fit-content;
+            background-color: #d0d3d8 ;
+            border: 0.3px solid gray;
+            border-radius: 3px;
+            align-items: center;
+            padding-right:  5px;
+        
+            p{
+                font-weight: 400;
+                font-size: 12px;
+            }
+        
+            select{
+                padding: 3px 0;
+                border: none;
+                margin-right: 5px;
+            }
+        }
+        
+        
+    }
+    .report_bottom{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .report_left{
+            
+            p{
+            margin: 5px;
+        }
+
+        button{
+            margin-top: 15px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            background-color: #556EE6;
+            color: white;
+            padding: 4px 10px;
+            cursor: pointer;
+
+            :any-link{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+        .report_right{
+            width: 60%;
+
+            .report_chart{
+                display:  flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border-bottom: 0.3px solid lightgray;
+            
+                p{
+                    color: #495057;
+                }
+
+                .report_chart_reason{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    align-items: center;
+                }
+                .report_chart_progressNb{
+                    display: flex;
+                }
+                .report_chart_progress svg{
+                    color: green;
+                    font-size: 20px;
+                }
+                .down svg{
+                    color: red;
+                }
+            }
+        }
+    }
 }
-.report_top{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 20px;
-}
-.report_top h2{
-    font-size: 18px;
-    font-weight: 800;
-    color: #495057;
-}
-.report_dropdown{
-    display: flex;
-    height: fit-content;
-    background-color: #d0d3d8 ;
-    border: 0.3px solid gray;
-    border-radius: 3px;
-    align-items: center;
-    padding-right:  5px;
-}
-.report_dropdown p{
-    font-weight: 400;
-    font-size: 12px;
-}
-.report_dropdown select{
-    padding: 3px 0;
-    border: none;
-    margin-right: 5px;
-}
-.report_bottom{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.report_left p{
-    margin: 5px;
-}
-.report_left button{
-    margin-top: 15px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background-color: #556EE6;
-    color: white;
-    padding: 4px 10px;
-    cursor: pointer;
-}
-.report_right{
- 
-    width: 60%;
-}
-.report_chart{
-    display:  flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 0.3px solid lightgray;
-}
-.report_chart p{
-    color: #495057;
-}
-.report_chart_reason{
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-}
-.report_chart_progressNb{
-    display: flex;
-}
-.report_chart_progress svg{
-    color: green;
-    font-size: 20px;
-}
-.down svg{
-    color: red;
-}
-.report_left button :any-link{
-    text-decoration: none;
-    color: white;
-}
+
+
+
+
+
+

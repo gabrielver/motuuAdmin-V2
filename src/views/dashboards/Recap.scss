@@ -3,35 +3,41 @@
 .recap{
     display: flex;
     justify-content: space-between;
-   
     padding: 10px;
-}
-.recap_card{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    box-shadow: $BoxShadow;
-    
-}
-.recap_card_icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: rgb(59, 89, 255);
-    border-radius: 25px;
-    height: 40px;
-    width: 40px;
-    margin-left: 15px;
 
+    .recap_card{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        box-shadow: $BoxShadow;
+
+        h2{
+            font-size: 14px;
+            font-weight: 600;
+            color: #74788D;
+        }
+
+        p{
+            font-weight: 800;
+        }
+
+        .recap_card_icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: rgb(59, 89, 255);
+            border-radius: 25px;
+            height: 40px;
+            width: 40px;
+            margin-left: 15px;
+        
+        }
+        
+    }
 }
-h2{
-    font-size: 14px;
-    font-weight: 600;
-    color: #74788D;
-}
-p{
-    font-weight: 800;
-}
+
+
+
