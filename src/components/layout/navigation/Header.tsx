@@ -1,5 +1,5 @@
 import React from "react";
-import "/src/styles/layout/Header.scss";
+import "./Header.scss";
 import SearchIcon from "@mui/icons-material/Search";
 import HeaderOption from "./HeaderOption";
 // import HomeIcon from "@mui/icons-material/Home";
@@ -8,8 +8,8 @@ import HeaderOption from "./HeaderOption";
 import LocalAirportIcon from "@mui/icons-material/LocalAirport";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useDispatch } from "react-redux";
-import { auth } from "../firebase";
-import { logout } from "../store/userSlice";
+import { auth } from "../../../utils/firebase";
+import { logout } from "../../../store/authentification/userSlice";
 import { Link } from "react-router-dom";
 
 import { HomeIcon } from '@heroicons/react/solid'

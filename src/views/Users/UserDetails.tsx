@@ -4,7 +4,7 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 // import "/src/styles/pages/ListTemplate.scss";
-import "/src/styles/master.scss"
+import "/src/master.scss"
 import SearchIcon from "@mui/icons-material/Search";
 function UserDetails() {
 

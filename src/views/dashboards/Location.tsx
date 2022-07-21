@@ -1,14 +1,13 @@
 import React from "react";
-import "/src/styles/modules/Reports.scss";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import { Link } from "react-router-dom";
 
-function Reports() {
+import LocationDetails from "../Locations/LocationDetails";
+function Location() {
   return (
     <div className="report">
       <div className="report_top">
-        <h2>Reports</h2>
+        <h2>Locations</h2>
         {/* Drop down menu */}
         <div className="report_dropdown">
           <select name="" id="" defaultValue={"JUILLET"}>
@@ -23,11 +22,10 @@ function Reports() {
         <div className="report_left">
           <p>nbr of report this months ...</p>
           <p>report to take care of ...</p>
-          <button>
-            <Link to="/Report">See all </Link>
-          </button>
+
+          <button>See all locations</button>
         </div>
-        <div className="report_right">
+        {/* <div className="report_right">
           <div className="report_chart">
             <div className="report_chart_reason">
               <h3>Nudity</h3>
@@ -82,10 +80,10 @@ function Reports() {
               <p>from last month</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
 }
 
-export default Reports;
+export default Location;

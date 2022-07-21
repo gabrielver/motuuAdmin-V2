@@ -3,7 +3,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import "/src/styles/pages/ListTemplate.scss";
+import "/src/components/Listing/ListTemplate.scss";
 import SearchIcon from "@mui/icons-material/Search";
 function PlaceDetails() {
 

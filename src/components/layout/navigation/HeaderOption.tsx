@@ -1,5 +1,5 @@
 import React, { ReactElement, SVGProps } from "react";
-import "/src/styles/layout/headerOption.scss";
+import "./headerOption.scss";
 import { Avatar, SvgIconTypeMap } from "@material-ui/core";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 

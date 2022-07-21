@@ -3,8 +3,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { App } from "./App";
-import "./styles/App.scss";
-import { store } from "./app/store";
+import "./App.scss";
+import { store } from "./store/authentification/store";
 import { Provider } from "react-redux";
 import { Build } from "@mui/icons-material";
 

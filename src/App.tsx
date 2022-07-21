@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Sidebar from "./app/Sidebar";
-import Main from "./app/Main";
-import { login, logout, selectUser } from "./store/userSlice";
-import Login from "./Login";
-import { auth } from "./firebase";
+import Sidebar from "./components/layout/navigation/Sidebar";
+import Main from "./components/layout/Main";
+import { login, logout, selectUser } from "./store/authentification/userSlice";
+import Login from "./store/authentification/Login";
+import { auth } from "./utils/firebase";
 
 export function App() {
   const user = useSelector(selectUser);

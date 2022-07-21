@@ -1,14 +1,14 @@
 import React from "react";
 import Body from "./Body";
-import Header from "./Header";
-import "/src/styles/layout/Main.scss";
+import Header from "./navigation/Header";
+import "./Main.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LocationDetails from "./components/LocationDetails";
+import LocationDetails from "../../views/Locations/LocationDetails";
 
-import UserDetails from "./components/UserDetails";
-import TravelDetails from "./components/TravelDetails";
-import ErrorPage from "./components/ErrorPage";
-import PlaceDetails from "./components/PlaceDetails";
+import UserDetails from "../../views/Users/UserDetails";
+import TravelDetails from "../../views/Travels/TravelDetails";
+import ErrorPage from "./ErrorPage";
+import PlaceDetails from "../../views/Places/PlaceDetails";
 
 function Main() {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import PersonIcon from "@mui/icons-material/Person";
 import LocalAirportIcon from "@mui/icons-material/LocalAirport";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import "/src/styles/modules/Recap.scss";
+import "./Recap.scss";
 
 function Recap() {
   return (
