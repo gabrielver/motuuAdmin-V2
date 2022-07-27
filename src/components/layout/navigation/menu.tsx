@@ -32,14 +32,16 @@ function menu() {
                 <a href="/Place">Flag about places</a>
                 <a href="/Place">Charts</a>
                 <a href="/Place">Place by continent</a>
+                <a href="/Place">Create new place</a>
                </div>
             </NavItem>
             <NavItem icon={<UserIcon/>} title="User" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
             {/* <DropDownMenu></DropDownMenu> */}
             <div className="dropdown">
-                <a href="/User">User database</a>
-                <a href="/User">Flag about users</a>
-                <a href="/User">Charts</a>
+                <a href="/UserList">User database</a>
+                <a href="/UserFlag">Flag about users</a>
+                <a href="/UserChart">Charts</a>
+                <a href="/UserCreate">Create new user</a>
                </div>
             </NavItem>
             <NavItem icon={<GlobeIcon/>} title="Travels" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>} >
@@ -49,6 +51,7 @@ function menu() {
                 <a href="/Travel">Family travels</a>
                 <a href="/Travel">Couple Travels</a>
                 <a href="/Travel">Travel to validate</a>
+                <a href="/Travel">Create new Travel</a>
                </div>
             </NavItem>
             <NavItem icon={<LocationMarkerIcon/>} title="Location" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
@@ -58,6 +61,7 @@ function menu() {
                 <a href="/Location">Location map</a>
                 <a href="/Location">Flagged location</a>
                 <a href="/Location">Location to validate</a>
+                <a href="/location">Create new location</a>
                </div>
             </NavItem>
         </Navbar>
