@@ -1,0 +1,108 @@
+:root{
+    --bg: #23242a;
+    --bg-accent: #484a4d;
+    --text-color: #afb0b1;
+    --speed: 500ms;
+}
+.menu{
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    background: #23242a;
+    width: 12vw;
+    min-width:135px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    // position:fixed;
+    // top: 0;
+    // z-index: 999;
+    // display: flex;
+    // flex-direction: column;
+    // height: 100%;
+
+    h1{
+        color: white;
+        font-size: 36px;
+        text-align: center;
+    }
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 400;
+    }
+    .navbar{
+        height: 100%;
+        padding: 0 2%;
+       
+        .navbar_nav{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+           
+        }
+        .nav-item{
+            width: 100%;
+            padding: 10px 0;
+            // background-color: red;
+            .icon-button svg{
+                fill: var(--text-color);
+                width: 20px;
+                height: 20px;
+                padding-right: 5px;
+              
+            }
+            .icon-button{
+                
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .icon{
+                display: flex;
+                justify-content: flex-start;
+            }
+            // .caret{
+            //     width: 0;
+            //     height: 0;
+            //     border-left: 5px solid transparent;
+            //     border-right: 5px solid transparent;
+            //     border-top: 6px solid #fff;
+            //     transition: 0.3s;
+            // }
+            .caret-rotate{
+                transform: rotate(180deg);
+            }
+            }
+
+        }
+        .icon-button:hover{
+            color: white;
+                filter: brightness(1.2)
+        }
+        
+        .dropdown{
+            
+            display: flex;
+            flex-direction: column;
+            a{
+                padding:5px 10%;
+                transition: all  0.3s;
+            }
+            a:hover{
+                color: white;
+                filter: brightness(1.2);
+                -webkit-box-shadow: inset 1px -1px 19px 2px #000000; 
+box-shadow: inset 1px -1px 19px 2px #000000;
+border-radius: 5px;
+            }
+        }
+    }
+}
+

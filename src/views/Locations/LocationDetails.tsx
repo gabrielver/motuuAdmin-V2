@@ -1,4 +1,5 @@
 import React from "react";
+import "/src/components/Listing/ListTemplate.scss";
 
 function LocationDetails() {
   return (

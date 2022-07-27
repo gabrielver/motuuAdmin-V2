@@ -9,12 +9,14 @@ import UserDetails from "../../views/Users/UserDetails";
 import TravelDetails from "../../views/Travels/TravelDetails";
 import ErrorPage from "./ErrorPage";
 import PlaceDetails from "../../views/Places/PlaceDetails";
-
+import Menu from "./navigation/menu";
 function Main() {
   return (
     <Router>
       <div className="main">
         <Header />
+        <Menu/>
+        <div className="main_body">
         <Routes>
           <Route path="/" element={<Body />} />
           <Route path="/Place" element={<PlaceDetails />} />
@@ -24,6 +26,8 @@ function Main() {
 
           <Route path="*" element={<ErrorPage />} />
         </Routes>
+        </div>
+        
         {/* <Body /> */}
 
         {/* footer */}
