@@ -1,8 +1,11 @@
 import React from 'react'
 import'../create.scss'
+import {motion} from 'framer-motion'
 
 function UserCreate() {
   return (
+   
+    <motion.div initial={{width: 0 }} animate={{ width: "100%" }} exit={{x: window.innerWidth}} transition={{ duration: 0.5}} >
     <div className='user_create'>
         <h2>CREATE USER</h2>
         <div className="card">
@@ -29,7 +32,7 @@ function UserCreate() {
             <div className="row">
               <label htmlFor="birthdate" className='form_label'>Birthdate</label>
               <div className='inputs'>
-                <input id="birthdate" name='birthdate' value="14/03/1992" type="text" className='form_control'/>
+                <input id="birthdate" name='birthdate' placeholder="../../...." type="text" className='form_control'/>
               </div>
             </div>
             <div className="row">
@@ -48,6 +51,7 @@ function UserCreate() {
           <button type='submit'>Create New User</button>
         </div>
     </div>
+    </motion.div> 
   )
 }
 

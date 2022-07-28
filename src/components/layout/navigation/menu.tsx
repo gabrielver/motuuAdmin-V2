@@ -38,10 +38,10 @@ function menu() {
             <NavItem icon={<UserIcon/>} title="User" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
             {/* <DropDownMenu></DropDownMenu> */}
             <div className="dropdown">
-                <a href="/UserList">User database</a>
-                <a href="/UserFlag">Flag about users</a>
-                <a href="/UserChart">Charts</a>
-                <a href="/UserCreate">Create new user</a>
+                <Link to="/UserList" ><a href="#">User database</a></Link>
+                <Link to="/UserFlag" ><a href="#">Flag about users</a></Link>
+                <Link to="/UserChart" ><a href="#">Charts</a></Link>
+                <Link to="/UserCreate" ><a href="#">Create new user</a></Link>
                </div>
             </NavItem>
             <NavItem icon={<GlobeIcon/>} title="Travels" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>} >

@@ -6,10 +6,15 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import "/src/components/Listing/ListTemplate.scss";
 
 import SearchIcon from "@mui/icons-material/Search";
+
+import { AnimatePresence, motion} from 'framer-motion'
+
 function UserDetails() {
 
   const index = 0
   return (
+    <AnimatePresence >
+    <motion.div  initial={{width: 0 }} animate={{ width: "100%" }} exit={{x: window.innerWidth}} transition={{ duration: 0.5}} >
     <div className="user_details">
       <h2>Users List</h2>
       <div className="card_body">
@@ -331,6 +336,8 @@ function UserDetails() {
         </div>
       </div>
     </div>
+  </motion.div>
+  </AnimatePresence>
   );
 }
 
