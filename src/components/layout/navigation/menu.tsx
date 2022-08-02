@@ -28,40 +28,40 @@ function menu() {
             <NavItem icon={<FlagIcon/>} title="Place" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
                {/* <DropDownMenu></DropDownMenu> */}
                <div className="dropdown">
-                <a href="/Place">All the places</a>
-                <a href="/Place">Flag about places</a>
-                <a href="/Place">Charts</a>
-                <a href="/Place">Place by continent</a>
-                <a href="/Place">Create new place</a>
+                <Link to="/Place">All the places</Link>
+                <Link to="/Place">Flag about places</Link>
+                <Link to="/Place">Charts</Link>
+                <Link to="/Place">Place by continent</Link>
+                <Link to="/Place">Create new place</Link>
                </div>
             </NavItem>
             <NavItem icon={<UserIcon/>} title="User" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
             {/* <DropDownMenu></DropDownMenu> */}
             <div className="dropdown">
-                <Link to="/UserList" ><a href="#">User database</a></Link>
-                <Link to="/UserFlag" ><a href="#">Flag about users</a></Link>
-                <Link to="/UserChart" ><a href="#">Charts</a></Link>
-                <Link to="/UserCreate" ><a href="#">Create new user</a></Link>
+                <Link to="/UserList" >User database</Link>
+                <Link to="/UserFlag" >Flag about users</Link>
+                <Link to="/UserChart" >Charts</Link>
+                <Link to="/UserCreate" >Create new user</Link>
                </div>
             </NavItem>
             <NavItem icon={<GlobeIcon/>} title="Travels" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>} >
             {/* <DropDownMenu></DropDownMenu> */}
             <div className="dropdown">
-                <a href="/Travel">All our Travels</a>
-                <a href="/Travel">Family travels</a>
-                <a href="/Travel">Couple Travels</a>
-                <a href="/Travel">Travel to validate</a>
-                <a href="/Travel">Create new Travel</a>
-               </div>
+                <Link to="/Travel">All our Travels</Link>
+                <Link to="/Travel">Family travels</Link>
+                <Link to="/Travel">Couple Travels</Link>
+                <Link to="/Travel">Travel to validate</Link>
+                <Link to ="/Travel">Create new Travel</Link>
+               </div>      
             </NavItem>
             <NavItem icon={<LocationMarkerIcon/>} title="Location" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
             {/* <DropDownMenu></DropDownMenu> */}
             <div className="dropdown">
-                <a href="/Location">List of locations</a>
-                <a href="/Location">Location map</a>
-                <a href="/Location">Flagged location</a>
-                <a href="/Location">Location to validate</a>
-                <a href="/location">Create new location</a>
+                <Link to="/Location">List of locations</Link>
+                <Link to="/Location">Location map</Link>
+                <Link to="/Location">Flagged location</Link>
+                <Link to="/Location">Location to validate</Link>
+                <Link to="/location">Create new location</Link>
                </div>
             </NavItem>
         </Navbar>
