@@ -46,6 +46,11 @@ module.exports = {
         type: "asset/resource",
       },
       { test: /\.tsx?$/, loader: "ts-loader" },
+      {
+        test: /\.json5$/i,
+        loader: "json5-loader",
+        type: "javascript/auto",
+      },
     ],
   },
   plugins: [

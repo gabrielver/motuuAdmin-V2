@@ -48,6 +48,10 @@
             align-items: flex-start;
            
         }
+        .dashboard{
+            color: white;
+            font-size: 16px;
+        }
         .nav-item{
             width: 100%;
             padding: 10px 0;
@@ -64,6 +68,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            cursor: pointer;
+
+            
             .icon{
                 display: flex;
                 justify-content: flex-start;

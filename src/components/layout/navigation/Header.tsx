@@ -6,7 +6,9 @@ import { useDispatch } from "react-redux";
 import { auth } from "../../../utils/firebase";
 import { logout } from "../../../store/authentification/userSlice";
 
-
+import '../../../i18n';
+import i18n from 'i18next';
+import { useTranslation } from "react-i18next";
 
 
 function Header() {
@@ -17,6 +19,10 @@ function Header() {
     auth.signOut();
   };
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  }
+  const { t } = useTranslation(); 
  
   return (
     
@@ -42,6 +48,10 @@ function Header() {
           title="Admin"
 
           onClick={logoutOfApp}        />
+      <div>
+        <button onClick={() => changeLanguage('fr')}>fr</button>
+        <button onClick={() => changeLanguage('en')}>en</button>
+      </div>
       </div>
     </div>
   );

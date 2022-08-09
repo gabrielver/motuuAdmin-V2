@@ -13,29 +13,32 @@ import { GlobeIcon } from '@heroicons/react/solid'
 import { LocationMarkerIcon } from '@heroicons/react/solid'
 import { Link } from "react-router-dom";
 
+import '../../../i18n';
+import { useTranslation } from "react-i18next";
+
 function menu() {
 
-  const [open, setOpen] = useState(false);
- 
+    const { t } = useTranslation(); 
 
+  const [open, setOpen] = useState(false);
    
   return (
     <div className="menu">
       <a href="/"><h1>Motuu</h1></a>
         <Navbar>
-           <Link to='/'><NavItem icon={<HomeIcon/>} title="Dashboard"></NavItem></Link> 
+           <Link className="dashboard" to='/'><NavItem  icon={<HomeIcon/>} title={t('Dashboard')}></NavItem></Link> 
             
-            <NavItem icon={<FlagIcon/>} title="Place" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
+            <NavItem icon={<FlagIcon/>} title={t('Experiences')} downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
                {/* <DropDownMenu></DropDownMenu> */}
                <div className="dropdown">
-                <Link to="/Place">All the places</Link>
-                <Link to="/Place">Flag about places</Link>
-                <Link to="/Place">Charts</Link>
-                <Link to="/Place">Place by continent</Link>
-                <Link to="/Place">Create new place</Link>
+                <Link to="/Place">{t('All_the_experiences')}</Link>
+                <Link to="/Place">{t('Flag_about_experiences')}</Link>
+                <Link to="/Place">{t('Chart')}</Link>
+                <Link to="/Place">{t('Experience_by_continent')}</Link>
+                <Link to="/Place">{t('Create_new_experience')}</Link>
                </div>
             </NavItem>
-            <NavItem icon={<UserIcon/>} title="User" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
+            <NavItem icon={<UserIcon/>} title={t('Users')} downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
             {/* <DropDownMenu></DropDownMenu> */}
             <div className="dropdown">
                 <Link to="/UserList" >User database</Link>
@@ -44,7 +47,7 @@ function menu() {
                 <Link to="/UserCreate" >Create new user</Link>
                </div>
             </NavItem>
-            <NavItem icon={<GlobeIcon/>} title="Travels" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>} >
+            <NavItem icon={<GlobeIcon/>} title={t('Travels')} downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>} >
             {/* <DropDownMenu></DropDownMenu> */}
             <div className="dropdown">
                 <Link to="/Travel">All our Travels</Link>
@@ -54,7 +57,7 @@ function menu() {
                 <Link to ="/Travel">Create new Travel</Link>
                </div>      
             </NavItem>
-            <NavItem icon={<LocationMarkerIcon/>} title="Location" downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
+            <NavItem icon={<LocationMarkerIcon/>} title={t('Location')} downIcon={<ChevronDownIcon/>} upIcon={<ChevronUpIcon/>}>
             {/* <DropDownMenu></DropDownMenu> */}
             <div className="dropdown">
                 <Link to="/Location">List of locations</Link>
@@ -83,14 +86,14 @@ const [open, setOpen] = useState(false);
 
 return(
     <li className="nav-item">
-        <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+        <div className="icon-button" onClick={() => setOpen(!open)}>
             <div className="icon">
             {props.icon}
             {props.title}
             </div>
             <span className="caret">{!open && props.downIcon}
             {open && props.upIcon}</span>
-        </a>
+        </div>
         {open && props.children}
         
     </li>
