@@ -47,10 +47,10 @@ function Header() {
           avatar="https://dw-wp-production.imgix.net/2021/02/Musk.jpg?w=1200&h=800&ixlib=react-9.0.3"
           title="Admin"
 
-          onClick={logoutOfApp}        />
-      <div>
-        <button onClick={() => changeLanguage('fr')}>fr</button>
-        <button onClick={() => changeLanguage('en')}>en</button>
+          onClick={logoutOfApp}/>
+      <div className="lgn_Button">
+        <button onClick={() => changeLanguage('fr')}>Fr</button>|
+        <button onClick={() => changeLanguage('en')}>En</button>
       </div>
       </div>
     </div>

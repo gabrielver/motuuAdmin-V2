@@ -50,12 +50,27 @@
 
     .header_right{
         display: flex;
+        justify-content: space-around;
+        align-items: center;
         margin-right: 1%;
         
         :link{
- 
             text-decoration: none;
-            
+        }
+        .lgn_Button{
+         
+            padding: 0 10px;
+            button{
+                padding: 0 5px;
+                margin: 5px;
+                border: none;
+                background: none;
+                cursor: pointer;
+                font-weight: 500;
+            }
+            button:hover{
+             color: rgb(43, 110, 233);
+            }
         }
     }
 }

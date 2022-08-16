@@ -55,7 +55,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "webpack App",
+      title: "Motuu | Admin",
       filename: "index.html",
       template: "src/template.html",
     }),
