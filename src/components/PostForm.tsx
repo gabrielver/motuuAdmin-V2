@@ -1,14 +1,12 @@
 import React, { useState, useContext } from "react";
-import'../create.scss'
-import {motion} from 'framer-motion'
-// import PostForm from '../../components/PostForm'
 
 import { gql } from "@apollo/client";
 import { useMutation } from "@apollo/client";
-import { useForm } from "../../utils/hooks";
+// import { useNavigate } from "react-router-dom";
+import { useForm } from "../utils/hooks";
 
-function UserCreate() {
-
+function PostForm(props) {
+  // let navigate = useNavigate();
   const [errors, setErrors] = useState({});
 
   const { onChange, onSubmit, values } = useForm(registerUser, {
@@ -26,49 +24,35 @@ function UserCreate() {
       // this.props.history.push("/");
       // navigate("/");
     },
-    onError(err) {
-      setErrors(
-        // err && err.graphQLErrors[0]
-        //   ? err.graphQLErrors[0].extensions.errors
-        //   : {}
-      {}
-      );
-    },
-    variables: {values: values["username"]},
+    // onError(err) {
+    //   setErrors(
+    //     err && err.graphQLErrors[0]
+    //       ? err.graphQLErrors[0].extensions.errors
+    //       : {}
+    //   );
+    // },
+    variables: values,
   });
 
   function registerUser() {
     addUser();
   }
 
-    // let username, email, password, confirmPassword
-    // const [createUser] = useMutation(REGISTER_APP_USER)
-
   return (
-   
-    <motion.div initial={{width: 0 }} animate={{ width: "100%" }} exit={{x: window.innerWidth}} transition={{ duration: 0.5}} >
-    <div className='user_create'>
-        <h2>CREATE USER</h2>
-       
-      
-         <div className="card">
+    <div className="card">
       <h3>Create New User</h3>
-      <form onSubmit={onSubmit}>
-      {/* <form onSubmit={ e => {
-        e.preventDefault();
-        createUser( {variables: {username: username.value, email: email.value, password: password.value, confirmPassword: username.value,}})
-      }}> */}
-      <div className="row">
+      <form onSubmit={onSubmit} className={loading ? "loading" : ""}>
+        <div className="row">
           <label htmlFor="Username" className="form_label">
             Username
           </label>
           <div className="inputs">
             <input
-            // ref={ value => username = value}
+              // label="Username"
               placeholder="Username.."
               name="username"
               value={values["username"]}
-              //error={errors.username ? true : false}
+              // error={errors.username ? true : false}
               onChange={onChange}
               className="form_control"
             />
@@ -80,12 +64,11 @@ function UserCreate() {
           </label>
           <div className="inputs">
             <input
-            // ref={ value => email = value}
               //  label="Email"
               placeholder="Email.."
               name="email"
               value={values["email"]}
-             // error={errors.email ? true : false}
+              // error={errors.email ? true : false}
               onChange={onChange}
               className="form_control"
             />
@@ -97,13 +80,12 @@ function UserCreate() {
           </label>
           <div className="inputs">
             <input
-            // ref={ value => password = value}
               //  label="Email"
               placeholder="Password.."
               name="password"
               type="password"
-             value={values["password"]}
-              //error={errors.password ? true : false}
+              value={values["password"]}
+              // error={errors.password ? true : false}
               onChange={onChange}
               className="form_control"
             />
@@ -115,18 +97,17 @@ function UserCreate() {
           </label>
           <div className="inputs">
             <input
-            // ref={ value => confirmPassword = value}
               placeholder="Confirm the password.."
               name="confirmPassword"
               type="password"
               value={values["confirmPassword"]}
-              //error={errors.confirmPassword ? true : false}
+              // error={errors.confirmPassword ? true : false}
               onChange={onChange}
               className="form_control"
             />
           </div>
         </div>
-         <div className="row">
+        <div className="row">
           <label htmlFor="firstname" className="form_label">
             firstname
           </label>
@@ -136,7 +117,7 @@ function UserCreate() {
               name="firstname"
               type="firstname"
               value={values["firstname"]}
-             // error={errors.firstname ? true : false}
+              // error={errors.firstname ? true : false}
               onChange={onChange}
               className="form_control"
             />
@@ -152,7 +133,7 @@ function UserCreate() {
               name="lastname"
               type="lastname"
               value={values["lastname"]}
-             // error={errors.lastname ? true : false}
+              // error={errors.lastname ? true : false}
               onChange={onChange}
               className="form_control"
             />
@@ -168,17 +149,14 @@ function UserCreate() {
               name="role"
               type="role"
               value={values["username"]}
-             // error={errors.role ? true : false}
+              // error={errors.role ? true : false}
               onChange={onChange}
               className="form_control"
             />
           </div>
-        </div> 
-        <button type="submit">Create New User</button>
+        </div>
       </form>
-      
-       
-       
+      <button type="submit">Create New User</button>
       {/* {Object.keys(errors || {}).length > 0 && (
         <div className="ui error message">
           <ul className="list">
@@ -188,10 +166,8 @@ function UserCreate() {
           </ul>
         </div>
       )} */}
-          </div>
     </div>
-    </motion.div> 
-  )
+  );
 }
 
 const REGISTER_APP_USER = gql`
@@ -223,4 +199,4 @@ const REGISTER_APP_USER = gql`
   }
 `;
 
-export default UserCreate
+export default PostForm;
